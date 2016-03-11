@@ -4,13 +4,13 @@
 ## Interface
 [*Cf. code/Interface.java*](https://github.com/toast254/SimpleJavaRMI/blob/master/code/Interface.java)
 
-L'interface disponible met a disposition une fonction de calcul de la suite de [Fibonacci](https://fr.wikipedia.org/wiki/Suite_de_Fibonacci) pour un nombre donné.
+L'interface disponible met à disposition une fonction de calcul de la suite de [Fibonacci](https://fr.wikipedia.org/wiki/Suite_de_Fibonacci) pour un nombre donné.
 
 
 ## Client
 [*Cf. code/AppClient.java*](https://github.com/toast254/SimpleJavaRMI/blob/master/code/AppClient.java)
 
-Le client se connecte au serveur, appel la fonction de calcul sur le serveur et recupere le resultat.
+Le client se connecte au serveur, appel la fonction de calcul sur le serveur et recupère le resultat.
 
 
 ## Serveur
@@ -25,7 +25,7 @@ Cette partie fournit le point d'entrée pour les client.
 ### Partie traitement
 [*Cf. code/Serveur.java*](https://github.com/toast254/SimpleJavaRMI/blob/master/code/Serveur.java)
 
-Cette partie fournit l'implementation de la fonction de l'interface.
+Cette partie fournit l'implémentation de la fonction de l'interface.
 
 
 # Autres exemples
