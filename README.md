@@ -26,3 +26,8 @@ Cette partie fournit le point d'entrée pour les client.
 [*Cf. code/Serveur.java*](https://github.com/toast254/SimpleJavaRMI/blob/master/code/Serveur.java)
 
 Cette partie fournit l'implementation de la fonction de l'interface.
+
+
+# Autres exemples
+  * http://www.jmdoudoux.fr/java/dej/chap-rmi.htm
+  * ...
