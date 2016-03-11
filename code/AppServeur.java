@@ -12,13 +12,13 @@ public class AppServeur
 
         try
         {
-            // creation du stub/skeleton vers le traitement
+            // creation du skeleton vers le traitement
             Interface skeleton = (Interface) UnicastRemoteObject.exportObject(new Serveur(true), port);
 
             // on cree le serveur
             Registry registry = LocateRegistry.createRegistry(port);
 
-            // publication de notre serveur sous le nom "Fibonacci" avec le traitement defini dans notre stub/skeleton
+            // publication de notre serveur sous le nom "Fibonacci" avec le traitement defini dans notre skeleton
             registry.rebind("Fibonacci", skeleton);
         }
         catch (Exception e)
