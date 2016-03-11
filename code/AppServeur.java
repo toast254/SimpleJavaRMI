@@ -13,7 +13,7 @@ public class AppServeur
         try
         {
             // creation du stub/skeleton vers le traitement
-            Interface skeleton = (Interface) UnicastRemoteObject.exportObject(new Serveur(), port);
+            Interface skeleton = (Interface) UnicastRemoteObject.exportObject(new Serveur(true), port);
 
             // on cree le serveur
             Registry registry = LocateRegistry.createRegistry(port);
