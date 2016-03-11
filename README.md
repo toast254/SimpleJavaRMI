@@ -15,12 +15,14 @@ Le client se connecte au serveur, appel la fonction de calcul sur le serveur et 
 
 ## Serveur
 
-### Serveur RMI
+Le serveur est composé de deux parties :
+
+### Partie RMI
 [*Cf. code/AppServeur.java*](https://github.com/toast254/SimpleJavaRMI/blob/master/code/AppServeur.java)
 
-Le serveur RMI fournit le point d'entrée pour les client.
+Cette partie fournit le point d'entrée pour les client.
 
-### Serveur de traitement
+### Partie traitement
 [*Cf. code/Serveur.java*](https://github.com/toast254/SimpleJavaRMI/blob/master/code/Serveur.java)
 
-Le serveur de traitement fournit l'implementation de la fonction de l'interface.
+Cette partie fournit l'implementation de la fonction de l'interface.
