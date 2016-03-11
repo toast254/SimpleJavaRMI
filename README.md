@@ -4,7 +4,7 @@
 ## Interface
 [*Cf. code/Interface.java*](https://github.com/toast254/SimpleJavaRMI/blob/master/code/Interface.java)
 
-L'interface disponible est le calcul de la suite de [Fibonacci](https://fr.wikipedia.org/wiki/Suite_de_Fibonacci) pour un nombre donné.
+L'interface disponible met a disposition une fonction de calcul de la suite de [Fibonacci](https://fr.wikipedia.org/wiki/Suite_de_Fibonacci) pour un nombre donné.
 
 
 ## Client
