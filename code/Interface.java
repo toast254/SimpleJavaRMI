@@ -1,8 +1,6 @@
 
-import java.rmi.Remote;
-import java.rmi.RemoteException;
+import java.rmi.*;
 
-public interface Interface extends Remote
-{
+public interface Interface extends Remote {
     public double fibonacci(int n) throws RemoteException;
 }
