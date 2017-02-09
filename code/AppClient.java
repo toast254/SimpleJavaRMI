@@ -1,16 +1,11 @@
 
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
+import java.rmi.registry.*;
 
-public class AppClient
-{
-    public static void main(String[] argv)
-    {
-        // le port
-        int port = 10000;
+public class AppClient {
+    public static void main(String[] argv) {
+        int port = 10000;  // le port
 
-        try
-        {
+        try {
             // on se connecte au serveur
             Registry registry = LocateRegistry.getRegistry(port);
 
@@ -19,9 +14,7 @@ public class AppClient
 
             // on execute et on affiche le resultat
             System.out.println(stub.fibonacci(100));
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
