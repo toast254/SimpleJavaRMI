@@ -30,4 +30,7 @@ Cette partie fournit l'implémentation de la fonction de l'interface.
 
 # Autres exemples
   * http://www.jmdoudoux.fr/java/dej/chap-rmi.htm
-  * ...
+  * http://www.info.univ-angers.fr/~richer/ens/m2cdsii/crs_rmi.pdf
+  * http://m.heid.free.fr/expander/rmi/rmi.html
+  * http://deptinfo.cnam.fr/Enseignement/CycleSpecialisation/SAR/Exercices_Samia_Bouzefrane.pdf
+  * http://alain-defrance.developpez.com/articles/Java/J2SE/micro-rmi/
