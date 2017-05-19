@@ -18,14 +18,14 @@ public class Serveur implements Interface {
     public Serveur(boolean fast, boolean cache) {
         fast_mode = fast;
         cache_mode = cache && fast;
-        fibo_results = new HashMap <Integer, Double> ();
+        fibo_results = new HashMap <> ();
         number = 1;
         // known values :
-        ajout_result(0,0);
-        ajout_result(1,1);
+        ajoutResult(0,0);
+        ajoutResult(1,1);
     }
 
-    private void ajout_result(int n, double result) {
+    private void ajoutResult(int n, double result) {
         fibo_results.put(new Integer(n), new Double(result));
     }
 
@@ -35,24 +35,26 @@ public class Serveur implements Interface {
             return 0;
         if (fast_mode)
             if (cache_mode)
-                return loop_cached_fibonaci(n);
+                return loopCachedFibonaci(n);
             else
-                return loop_fibonacci(n);
+                return loopFibonacci(n);
         else
-            return rec_fibonacci(n);
+            return recFibonacci(n);
     }
 
-    private double rec_fibonacci(int n) {  // recursive based algorithm, complexity = 2^n
+    private double recFibonacci(int n) {  // recursive based algorithm, complexity = 2^n
         if (n <= 1)
             return n;
         else
-            return rec_fibonacci(n-1) + rec_fibonacci(n-2);
+            return recFibonacci(n - 1) + recFibonacci(n - 2);
     }
 
-    private double loop_fibonacci(int n) {  // loop based algorithm, complexity =~ 2*n
+    private double loopFibonacci(int n) {  // loop based algorithm, complexity =~ 2*n
         if (n == 1 || n == 2)
             return 1;
-        double fibo1=1, fibo2=1, result=1;
+        double fibo1 = 1; 
+        double fibo2 = 1;
+        double result = 1;
         for (int i = 3; i <= n; i++) {
             result = fibo1 + fibo2;  // Fibonacci number is sum of previous two Fibonacci number
             fibo1 = fibo2;
@@ -62,17 +64,17 @@ public class Serveur implements Interface {
         return result;
     }
 
-    private double loop_cached_fibonaci(int n) {  // loop based algorithm with result caching, complexity =< "loop_fibonacci"
+    private double loopCachedFibonaci(int n) {  // loop based algorithm with result caching, complexity =< "loop_fibonacci"
         if (n <= number)  // == fibo_results.contains(n)
             return fibo_results.get(n);
-        double fibo1 = fibo_results.get(number-1);
+        double fibo1 = fibo_results.get(number - 1);
         double fibo2 = fibo_results.get(number);
         double result = 0;
         for (int i = number + 1; i <= n; i++) {
             result = fibo1 + fibo2;  // Fibonacci number is sum of previous two Fibonacci number
             fibo1 = fibo2;
             fibo2 = result;
-            ajout_result(number = i, result);  // garder en cache le resultat
+            ajoutResult(number = i, result);  // garder en cache le resultat
         }
         return result;
     }
